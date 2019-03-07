@@ -1,0 +1,12 @@
+Program start
+The program starts by importing the keyboard library the will be used to log the keys
+Datetime library is also imported to include an accurate date and time that the key is recorded when written to the file
+Two lists are created, one with the program kill command and the other and empty list to insert the kill command into
+The text file that the pressed keys are logged to is opened and set to append mode
+The keys are logged using read_hotkey
+The first 'if' statement to insert only an 'k' in pos 0 of the 'kill_array' list, so that it is equal and the same as pos 0 of the defined 'kill_command' list
+Basically the same thing as the 'if' above, except now taking the pos 1 of the 'kill_array' and making sure its the same as pos 1 of 'kill_command'(i)
+Final 'elif' that will make sure pos 3 in 'kill_array' is equal to pos 2 of 'kill_command'(l). As we as deleting any character after pos 2
+in the event that there is more then one of the allowed inputs
+The final 'if' is to check to see that when 'kill_array' is equal to 'kill_command' that the program breaks and ends
+Program end
