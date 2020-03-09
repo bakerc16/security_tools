@@ -1,0 +1,1817 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(42, 105, 42); */
+    background-color: #1E76DC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .recent__header {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .recent__header {
+        margin-left: 135px;
+    }
+}
+
+.recent__header {
+    color: #1E76DC;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+ * Header Styles
+ */
+
+header {
+    align-items: center;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header a {
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* header a+a {
+    margin-left: 20px;
+} */
+
+header a {
+    margin-left: 5px;
+}
+
+.header--blue {
+    background: rgb(30, 118, 220, .85);
+    position: static;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header--virus {
+    margin-left: 0;
+}
+
+/*
+ * Hero Image
+ */
+
+.hero {
+    height: 90vh;
+    position: relative;
+    background-color: black;
+}
+
+.hero__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero__title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .hero__title {
+        padding-left: 25px;
+    }
+}
+
+.hero__title {
+    color: #ffffff;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&0+0,1+78 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 0) 0%, rgba(30, 118, 220, 1) 78%, rgba(30, 118, 220, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 0) 0%, rgba(30, 118, 220, 1) 78%, rgba(30, 118, 220, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 0) 0%, rgba(30, 118, 220, 1) 78%, rgba(30, 118, 220, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e76dc', endColorstr='#1e76dc', GradientType=0);
+    /* IE6-9 */
+}
+
+/*
+ * Post Page Hero
+ */
+
+.post__hero1 {
+    position: relative;
+    width: 495px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.post__hero2 {
+    position: relative;
+    width: 495px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.post__heroimage {
+    display: block;
+    height: auto;
+    max-height: 225px;
+    line-height: 0;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.post__herotitle {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    line-height: 45px;
+    height: 50px;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&0+0,1+78 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 0) 0%, rgba(30, 118, 220, 1) 78%, rgba(30, 118, 220, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 0) 0%, rgba(30, 118, 220, 1) 78%, rgba(30, 118, 220, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 0) 0%, rgba(30, 118, 220, 1) 78%, rgba(30, 118, 220, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e76dc', endColorstr='#1e76dc', GradientType=0);
+    /* IE6-9 */
+}
+
+.head__title {
+    color: #1E76DC;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .head__title {
+        margin: 5px;
+    }
+}
+
+/*
+ * shared "post" styles
+ */
+
+.posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.post {
+    position: relative;
+    margin-bottom: 15px;
+    width: 45%;
+}
+
+@media only screen and (min-width: 768px) {
+    .posts {
+        width: 1024px;
+    }
+    .post {
+        width: 240px;
+        margin-right: 15px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .post {
+        margin-right: 5px;
+        width: 120px;
+    }
+}
+
+.post__image {
+    display: block;
+    height: auto;
+    max-height: 150px;
+    line-height: 0;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.post__title {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    line-height: 20px;
+    height: 30px;
+    z-index: 1;
+    background: #1E76DC;
+    opacity: 0.85;
+}
+
+@media only screen and (max-width: 600px) {
+    .post__title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.filter-btn {
+    border: none;
+    background: #1E76DC;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+    .filter-btn {
+        padding: 0.25rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .filter-btn {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+.filters {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.filter-title {
+    color: #1E76DC;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .filter-title {
+        font-size: 1rem;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .filter-title {
+        font-size: 1.25rem;
+    }
+}
+
+/*#sort-btn {
+    border: none;
+    background: #1E76DC;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}*/
+
+/*
+ * Recent Posts Styles
+ */
+
+.post--recent:first-of-type {
+    width: 495px;
+}
+
+@media only screen and (max-width: 600px) {
+    .post__hero1 {
+        width: 255px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post__hero1 {
+        width: 495px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .post__hero2 {
+        width: 255px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post__hero2 {
+        width: 495px;
+    }
+}
+
+/*
+ * Post Page (Audi RS5)
+ */
+
+.spec__list li {
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.spec__list li value {
+    text-align: right;
+}
+
+.spec__list {
+    padding-top: 0;
+    width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__list {
+        position: absolute;
+        top: 65px;
+        right: 50px;
+        width: calc(46.5% - 40px);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .spec__list {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .spec__list {
+        top: 195px;
+        width: calc(40% - 40px);
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+.spec__head {
+    padding-right: 100px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .spec__head {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__head {
+        font-size: 25px;
+    }
+}
+
+.spec__info {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .spec__info {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__info {
+        font-size: 20px;
+    }
+}
+
+.spec__starting {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.spec__price {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .spec__price {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__price {
+        font-size: 40px;
+    }
+}
+
+.post__specs {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #ffffff
+}
+
+.top__image {
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+    .top__image {
+        left: 60px;
+        top: 50px;
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .top__image {
+        top: 100px;
+        left: 25px;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .top__image {
+        top: 195px;
+        left: 50px;
+        width: calc(58.5% - 50px);
+    }
+}
+
+.car__image {
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.car__title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .car__title {
+        font-size: 20px;
+        padding: 3rem 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .car__title {
+        font-size: 50px;
+        padding: 4rem 0px;
+    }
+}
+
+.car__header {
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+.post-page {
+    background: #1E76DC;
+}
+
+.post-page h2 {
+    color: #ffffff;
+    text-align: center;
+    /* padding: 3rem 0; */
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 0) 75%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-page h2 {
+        font-size: 18px;
+        padding: 1rem 0px;
+    }
+    @media only screen and (orientation: landscape) {
+        .post-page h2 {
+            font-size: 20px;
+        }
+    }
+    @media only screen and (orientation: portrait) {
+        .post-page h2 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post-page h2 {
+        font-size: 30px;
+        padding: 2rem 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-page h2 {
+        font-size: 40px;
+        padding: 3rem 0px;
+    }
+}
+
+.car__specs {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*
+ * Post Page (Ferrari 488 GTB)
+ */
+
+.spec__list li {
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.spec__list li value {
+    text-align: right;
+}
+
+.spec__list {
+    padding-top: 0;
+    width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__list {
+        position: absolute;
+        top: 65px;
+        right: 50px;
+        width: calc(46.5% - 40px);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .spec__list {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .spec__list {
+        top: 195px;
+        width: calc(40% - 40px);
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+.ferrari488__head {
+    padding-right: 100px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrari488__head {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrari488__head {
+        font-size: 25px;
+    }
+}
+
+.ferrari488__info {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrari488__info {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrari488__info {
+        font-size: 20px;
+    }
+}
+
+.ferrari488__starting {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.ferrari488__price {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrari488__price {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrari488__price {
+        font-size: 40px;
+    }
+}
+
+.post__specs {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #ffffff
+}
+
+.top__image {
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+    .top__image {
+        left: 60px;
+        top: 50px;
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .top__image {
+        top: 100px;
+        left: 25px;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .top__image {
+        top: 195px;
+        left: 50px;
+        width: calc(58.5% - 50px);
+    }
+}
+
+.car__image {
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.car__title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .car__title {
+        font-size: 20px;
+        padding: 3rem 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .car__title {
+        font-size: 50px;
+        padding: 4rem 0px;
+    }
+}
+
+.car__header {
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+.post-page h2 {
+    color: #ffffff;
+    text-align: center;
+    /* padding: 3rem 0; */
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 0) 75%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-page h2 {
+        font-size: 18px;
+        padding: 1rem 0px;
+    }
+    @media only screen and (orientation: landscape) {
+        .post-page h2 {
+            font-size: 20px;
+        }
+    }
+    @media only screen and (orientation: portrait) {
+        .post-page h2 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post-page h2 {
+        font-size: 30px;
+        padding: 2rem 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-page h2 {
+        font-size: 40px;
+        padding: 3rem 0px;
+    }
+}
+
+.car__specs {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*
+ * Post Page (Ferrari Portofino)
+ */
+
+.ferrariporto__list li {
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.ferrariporto__list li value {
+    text-align: right;
+}
+
+.ferrariporto__list {
+    padding-top: 0;
+    width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrariporto__list {
+        position: absolute;
+        top: 65px;
+        right: 50px;
+        width: calc(46.5% - 40px);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .ferrariporto__list {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ferrariporto__list {
+        top: 195px;
+        width: calc(40% - 40px);
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+.ferrariporto__head {
+    padding-right: 100px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrariporto__head {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrari488__head {
+        font-size: 25px;
+    }
+}
+
+.ferrariporto__info {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrariporto__info {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrariporto__info {
+        font-size: 20px;
+    }
+}
+
+.ferrariporto__starting {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.ferrariporto__price {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrariporto__price {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrariporto__price {
+        font-size: 40px;
+    }
+}
+
+.ferrariporto__specs {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #ffffff
+}
+
+.ferrariporto__image {
+    height: auto;
+    z-index: 2;
+    position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+    .ferrariporto__image {
+        left: 60px;
+        top: 50px;
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ferrariporto__image {
+        top: 100px;
+        left: 25px;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ferrariporto__image {
+        top: 195px;
+        left: 50px;
+        width: calc(58.5% - 50px);
+    }
+}
+
+.car__image {
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.car__title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .car__title {
+        font-size: 20px;
+        padding: 3rem 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .car__title {
+        font-size: 50px;
+        padding: 4rem 0px;
+    }
+}
+
+.car__header {
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+.post-page h2 {
+    color: #ffffff;
+    text-align: center;
+    /* padding: 3rem 0; */
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 0) 75%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-page h2 {
+        font-size: 18px;
+        padding: 1rem 0px;
+    }
+    @media only screen and (orientation: landscape) {
+        .post-page h2 {
+            font-size: 20px;
+        }
+    }
+    @media only screen and (orientation: portrait) {
+        .post-page h2 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post-page h2 {
+        font-size: 30px;
+        padding: 2rem 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-page h2 {
+        font-size: 40px;
+        padding: 3rem 0px;
+    }
+}
+
+.ferrariporto__specs {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*
+ * Post Page (Lamborghini Huracan)
+ */
+
+.spec__list li {
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.spec__list li value {
+    text-align: right;
+}
+
+.spec__list {
+    padding-top: 0;
+    width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__list {
+        position: absolute;
+        top: 65px;
+        right: 50px;
+        width: calc(46.5% - 40px);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .spec__list {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .spec__list {
+        top: 195px;
+        width: calc(40% - 40px);
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+.huracan__head {
+    padding-right: 100px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .huracan__head {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .huracan__head {
+        font-size: 25px;
+    }
+}
+
+.huracan__info {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .huracan__info {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .huracan__info {
+        font-size: 20px;
+    }
+}
+
+.huracan__starting {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.huracan__price {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .huracan__price {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .huracan__price {
+        font-size: 40px;
+    }
+}
+
+.post__specs {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #ffffff
+}
+
+.top__image {
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+    .top__image {
+        left: 60px;
+        top: 50px;
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .top__image {
+        top: 100px;
+        left: 25px;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .top__image {
+        top: 195px;
+        left: 50px;
+        width: calc(58.5% - 50px);
+    }
+}
+
+.car__image {
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.car__title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .car__title {
+        font-size: 20px;
+        padding: 3rem 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .car__title {
+        font-size: 50px;
+        padding: 4rem 0px;
+    }
+}
+
+.car__header {
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+.post-page h2 {
+    color: #ffffff;
+    text-align: center;
+    /* padding: 3rem 0; */
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 0) 75%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-page h2 {
+        font-size: 18px;
+        padding: 1rem 0px;
+    }
+    @media only screen and (orientation: landscape) {
+        .post-page h2 {
+            font-size: 20px;
+        }
+    }
+    @media only screen and (orientation: portrait) {
+        .post-page h2 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post-page h2 {
+        font-size: 30px;
+        padding: 2rem 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-page h2 {
+        font-size: 40px;
+        padding: 3rem 0px;
+    }
+}
+
+.car__specs {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*
+ * Post Page (Audi R8)
+ */
+
+.spec__list li {
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.spec__list li value {
+    text-align: right;
+}
+
+.spec__list {
+    padding-top: 0;
+    width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+    .spec__list {
+        position: absolute;
+        top: 65px;
+        right: 50px;
+        width: calc(46.5% - 40px);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .spec__list {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .spec__list {
+        top: 195px;
+        width: calc(40% - 40px);
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+.audir8__head {
+    padding-right: 100px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .audir8__head {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .audir8__head {
+        font-size: 25px;
+    }
+}
+
+.audir8__info {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .audir8__info {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .audir8__info {
+        font-size: 20px;
+    }
+}
+
+.ferrari488__starting {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.audir8__price {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .audir8__price {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .audir8__price {
+        font-size: 40px;
+    }
+}
+
+.post__specs {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #ffffff
+}
+
+.top__image {
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+    .top__image {
+        left: 60px;
+        top: 50px;
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .top__image {
+        top: 100px;
+        left: 25px;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .top__image {
+        top: 195px;
+        left: 50px;
+        width: calc(58.5% - 50px);
+    }
+}
+
+.car__image {
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.car__title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .car__title {
+        font-size: 20px;
+        padding: 3rem 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .car__title {
+        font-size: 50px;
+        padding: 4rem 0px;
+    }
+}
+
+.car__header {
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+.post-page h2 {
+    color: #ffffff;
+    text-align: center;
+    /* padding: 3rem 0; */
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e76dc+0,1e76dc+100&1+26,0+100 */
+    background: -moz-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30, 118, 220, 1) 0%, rgba(30, 118, 220, 1) 26%, rgba(30, 118, 220, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 1) 5%, rgba(30, 118, 220, 0) 75%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e76dc', endColorstr='#001e76dc', GradientType=0);
+    /* IE6-9 */
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-page h2 {
+        font-size: 18px;
+        padding: 1rem 0px;
+    }
+    @media only screen and (orientation: landscape) {
+        .post-page h2 {
+            font-size: 20px;
+        }
+    }
+    @media only screen and (orientation: portrait) {
+        .post-page h2 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post-page h2 {
+        font-size: 30px;
+        padding: 2rem 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-page h2 {
+        font-size: 40px;
+        padding: 3rem 0px;
+    }
+}
+
+.car__specs {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*
+ * About Page
+ */
+
+.about__title {
+    color: #1E76DC;
+    text-align: center;
+}
+
+.the__blog {
+    padding-left: 25px;
+    text-align: center;
+}
+
+.blog__text {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.the__author {
+    padding-left: 25px;
+    text-align: center;
+}
+
+.author__text {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+    width: 15%;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Add some padding inside the card container */
+
+.container {
+    padding: 2px 15px;
+    margin: 0;
+}
+
+/*
+ * Top Button
+ */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #1E76DC;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    opacity: 0.75;
+}
+
+@media only screen and (max-width: 600px) {
+    #myBtn {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+#myBtn:hover {
+    background-color: #CACACA;
+}
+
+/*
+ * Scroll Bar
+ */
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1E76DC;
+}
+
+/*
+ * Image Zoom
+ */
+
+.post:hover {
+    transform: scale(1.1);
+    z-index: 999999999;
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%
+  }
+  
+  .bgimg {
+    /* Full-screen */
+
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: #ffffff;
+    /* Add a font */
+    font-family: "Courier New", Courier, monospace;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+  } 
+  
+  /* Position text in the top-left corner */
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+  /* Position text in the bottom-left corner */
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    color:white;
+  }
+  
+  /* Position text in the middle */
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #00ff00;
+
+  }
+  
+  /* Style the <hr> element */
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+
+  .the__class {
+    padding-left: 25px;
+    text-align: center;
+}
+
+.the__creation {
+    padding-left: 25px;
+    text-align: center;
+}
+
+.the__email {
+    padding-left: 25px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login__title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .login__title {
+        padding-left: 25px;
+    }
+}
+
+.login__title {
+    color: #ffffff;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 300px;
+    margin: 0;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    text-align: center;
+}
+
+.login__image {
+    /* object-fit: cover; */
+   width: 100%;
+    height: 112%;
+}
